@@ -58,10 +58,20 @@ class Cell {
     }
 }
 
+function reconstPath(cameFrom, current) {
+    let totalPath = []
+    this.current = current
 
-
+    while (this.current.parent){
+        totalPath.push(current)
+        this.current = cameFrom
+        return totalPath;
+    }
+}
 
 function animate() {
+
+
 
     grid.createGrid()
 
